@@ -1,0 +1,16 @@
+# o/p1--
+# Enter the array elements (space-separated): 
+# Enter the window size (k): 2
+# Sliding window maximums: []
+
+# o/p2--
+# Enter the array elements (space-separated): 1 3 4 3 6
+# Enter the window size (k): 3
+# Sliding window maximums: [4, 4, 6]
+
+
+
+# ----------
+# MINimum 
+# ----------
+# while dq and nums[dq[-1]] > nums[i]:  # for minimum --> >
