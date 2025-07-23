@@ -351,7 +351,7 @@ for _ in range(n):
 
 
 # p20
-###--- Checking if a number is prime or not 
+###--- Checking if a number is prime or not --- 1 and itself
 num = int(input("Enter a number: "))
 
 if num <= 1:
@@ -366,6 +366,25 @@ else:
         print("Prime Number")
     else:
         print("Not a Prime Number")
+
+#(or)
+def is_prime(n):
+    if n <= 1:
+        return False
+    if n == 2:
+        return True
+    if n % 2 == 0:
+        return False
+    for i in range(3, int(n**0.5) + 1, 2):
+        if n % i == 0:
+            return False
+    return True
+
+num = int(input("Enter a number: "))
+if is_prime(num):
+    print(num, "is a Prime Number")
+else:
+    print(num, "is Not a Prime Number")
 
 
 
