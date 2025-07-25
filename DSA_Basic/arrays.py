@@ -228,15 +228,18 @@ for i in range(n):
         print("*",end=" ")
     print()
 
+# 12))
 
-
-
-
-
-
-
-
-
+  #         1 
+  #       2 3 4 
+  #     5 6 7 8 9 
+  #   10 11 12 13 14 15 16 
+  # 17 18 19 20 21 22 23 24 25 
+  # 26 27 28 29 30 31 32 33 34 
+  #   35 36 37 38 39 40 41 
+  #     42 43 44 45 46 
+  #       47 48 49 
+  #         50 
 
 # add count += 1
 n = 5
@@ -267,8 +270,87 @@ for i in range(n):
     print()
 
 
+# 13)) numbers
+# 1 
+# 1 2 
+# 1 2 3 
+# 1 2 3 4 
+# 1 2 3 4 5 
+
+n = 5
+for i in range(1,n+1):
+    for j in range(1,i+1):
+        print(j,end = " ")
+    print()
 
 
+# 14))
+
+# A 
+# A B 
+# A B C 
+# A B C D 
+# A B C D E 
+
+n = 5
+for i in range(1,n+1):
+    for j in range(i):
+        print(chr(65 + j),end = " ")
+    print()
+
+#chr A
+# chr(65)  → 'A'  
+# chr(66)  → 'B'  
+# chr(67)  → 'C'
+
+#chr a
+# chr(97)  → 'a'
+
+# only A
+# A 
+# A A 
+# A A A 
+# A A A A 
+# A A A A A 
+# chr(65) -- change this line
+
+# 1
+# 1 1
+# 1 1 1
+# 1 1 1 1 
+
+print("1",end = " ")
+
+# B  
+# B C  
+# B C D  
+# B C D E  
+# B C D E F
+
+chr(66 + j)
+
+# 2  
+# 2 3  
+# 2 3 4  
+# 2 3 4 5  
+# 2 3 4 5 6
+
+print(2 + j, end=' ')
+
+# 1  
+# 0 1  
+# 1 0 1  
+# 0 1 0 1
+
+
+# change this line print((i + j) % 2, end=' ')--- remender 0 1
+
+n = 4  # number of rows
+
+for i in range(1, n + 1):
+    for j in range(i):
+        print((i + j) % 2, end=' ')
+    print()
 
 
 
