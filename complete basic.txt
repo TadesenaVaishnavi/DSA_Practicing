@@ -1,0 +1,27 @@
+# 1) float('-inf')
+
+int() cannot represent negative infinity, so int("-inf") is invalid and throws an error.
+#****
+float("-inf") is a valid special floating-point value representing negative infinity.
+
+Using float("-inf") ensures any real number in the list will be larger and update correctly.
+
+# 2) sort is a list method, and max is a built-in Python function.
+### **Function**
+
+# * A function is **independent** and can be called directly (e.g., `max(nums)`).
+# * It is *not tied* to any specific object.
+
+# ### **Method**
+
+# * A method is a **function that belongs to an object** (e.g., `nums.sort()`).
+# * It is called **using the object**, because it works *on* that object.
+
+
+# ****
+# **Shortcut memory:**
+# 👉 **Function = free**
+# 👉 **Method = attached to an object**
+
+# trick to remember function - free f f
+# sort is a list method, and max is a built-in Python function.
