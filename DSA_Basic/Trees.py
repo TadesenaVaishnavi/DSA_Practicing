@@ -21,6 +21,8 @@ def count_leaves(root):
         return 1
     return count_leaves(root.left) + count_leaves(root.right)
 
+#  return 1 --> Then root node becomes the leaf node.
+
 # 4) Check if Two Trees are Identical
 
 def is_identical(root1, root2):
@@ -71,8 +73,28 @@ def invertTree(root):
 # ⏱️ Time Complexity: O(N) (visit every node once)
 # 📦 Space Complexity: O(H) (stack space, H = height of tree, worst case O(N) for skewed tree)
 
-# 2. Iterative (BFS with Queue)
+# method 2. Iterative (BFS with Queue)
+# BFS --- level by level it traval
 
+# Queue
+# enqueue() → insert
+# dequeue() → remove
+# front() → see first element
+
+# stack
+# push() → insert
+# pop() → remove
+# peek() → see top element
+
+#****
+# deque
+# A data structure where you can insert/remove from both ends (front and back).                
+
+# Both are not same 
+# Word	Meaning	Same?
+# deque	- Double-ended queue data structure	❌ NO
+# dequeue -	Operation to remove item from queue	❌ NO
+                 
 from collections import deque
 
 def invertTreeIterative(root):
@@ -150,6 +172,7 @@ def diameter(root):
 # Diameter = 3 edges (or 4 nodes)
 
 # 4) Lowest Common Ancestor (LCA)
+                
 def lca_bst(root, p, q):
     if not root:
         return None
