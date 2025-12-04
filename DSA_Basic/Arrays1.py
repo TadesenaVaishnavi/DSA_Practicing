@@ -2,6 +2,40 @@
 # An array is a collection of elements (usually of the same data type) stored in contiguous memory locations.
 arr = [45,87,98,35]
 
+# array input in Python
+# 1️⃣ Python — Basic Input (Single Line, Space-separated)
+# Input: 5 10 15 20
+arr = list(map(int, input("Enter array elements: ").split()))
+print(arr)
+# map(int, ...) → converts each string to integer
+
+# 2️⃣ Python — Input One by One (Using Loop)
+n = int(input("Enter number of elements: "))
+arr = []
+for i in range(n):
+    arr.append(int(input(f"Enter element {i+1}: ")))
+print(arr)
+# Enter number of elements: 2
+# Enter element 1: 3
+# Enter element 2: 5
+# [3, 5]
+
+# 3️⃣ Python — Input with Comma-separated Values
+# Input: 1,2,3,4
+arr = list(map(int, input("Enter array elements separated by comma: ").split(',')))
+print(arr)
+
+# 4️⃣ Python — Predefined Array (No Input)
+arr = [1, 2, 3, 4, 5]
+print(arr)
+
+# 5️⃣ Python — Using List Comprehension
+arr = [int(x) for x in input("Enter elements: ").split()]
+print(arr)
+
+# Enter elements: 5 67 8
+# [5, 67, 8]
+
 # Access Example
 print(arr[2])
 # Indexing starts from 0
@@ -125,3 +159,4 @@ for i in range(len(arr)):
 # Approach 2 — Hash Map (Best Logic for Interviews)
 # Use dictionary to store {value: index}
 # For each element check: target - arr[i] already seen?
+
