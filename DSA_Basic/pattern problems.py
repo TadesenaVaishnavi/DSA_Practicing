@@ -37,12 +37,13 @@ for i in range(n):
 # * * * * * 
 
 n = int(input("Enter a number: "))
-for i in range(n):             # i controls the vertical (rows)
+for i in range(n):             # i controls the vertical (rows) & # i moves to next line
     for j in range(n):         # j controls the horizontal (columns)
         print("*", end=" ")    # prints * on the same line with a space
     print()                    # moves to the next line after inner loop
 
-
+# i = 0, 1, 2, 3, 4
+# Each loop, i goes up by +1 automatically.
 
 # 2)) for increasing order 
 # * 
@@ -95,7 +96,7 @@ for i in range(n):
 
     # Second inner loop to print stars
     # It prints (i + 1) stars on each row
-    for j in range(i + 1):
+    for j in range(i + 1): # +1 --i initially starts at 0.
         print("*", end=" ")
 
     # Move to the next line after each row
@@ -110,7 +111,8 @@ for i in range(n):
   #         * 
 
 # change this 2 word --- j -- i,n and i+1
-
+for j in range(i+1):
+for j in range(i,n):
 # 6)) Upper pyramid (increasing stars):
 
   #         * 
@@ -120,7 +122,7 @@ for i in range(n):
   # * * * * * * * * * 
 # add this 3 word -- j --- i,n, i , i + 1
 n = 5
-for i in range(n):
+for i in range(n): # i moves to next line 
     for j in range(i,n):
         print(" ", end = " ")
     for j in range(i):
@@ -128,6 +130,22 @@ for i in range(n):
     for j in range(i + 1):
         print("*", end = " ")
     print()
+
+# for more clear understanding
+n = 4
+for i in range(n):
+    for j in range(i,n):
+        print(" ",end = " ")
+    for j in range(i):
+        print("7", end=" ")
+    for j in range(i+1):
+        print("6", end=" ")
+    print()
+
+#         6 
+#       7 6 6 
+#     7 7 6 6 6 
+#   7 7 7 6 6 6 6 
 
 # 7)) Lower inverted pyramid (decreasing stars):
 
@@ -203,8 +221,35 @@ for i in range(n):
     for j in range(2 * (n - i) - 1):
         print("*", end=" ")
     print()  # Move to next line
-  
+
 # 9))
+  #           * 
+  #         * * * 
+  #       * * * * * 
+  #     * * * * * * * 
+  #   * * * * * * * * * 
+  # * * * * * * * * * * * 
+  #   * * * * * * * * * 
+  #     * * * * * * * 
+  #       * * * * * 
+  #         * * * 
+  #           * 
+n = 6  # change this to any positive integer
+
+# top half (including middle row)
+for i in range(1, n + 1):
+    # (n - i) groups of two spaces to align like your examples
+    print("  " * (n - i), end="")
+    # (2*i - 1) stars separated by single spaces
+    print(" ".join(["*"] * (2 * i - 1)))
+
+# bottom half (excluding middle row)
+for i in range(n - 1, 0, -1):
+    print("  " * (n - i), end="")
+    print(" ".join(["*"] * (2 * i - 1)))
+
+  
+# 10))
 
 # combining IO and DO
 # * 
@@ -228,7 +273,7 @@ for i in range(n):
         print("*",end=" ")
     print()
 
-# 12))
+# 13))
 
   #         1 
   #       2 3 4 
@@ -351,6 +396,7 @@ for i in range(1, n + 1):
     for j in range(i):
         print((i + j) % 2, end=' ')
     print()
+
 
 
 
