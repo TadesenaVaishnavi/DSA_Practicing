@@ -1,0 +1,47 @@
+break, continue, pass → interview favorites
+break
+break terminates the loop completely when a condition is met.
+continue
+Skip the current iteration and move to the next one.
+  x == 3 --> 1245
+pass
+pass does nothing and is used as a placeholder to avoid syntax errors.
+
+  
+1️⃣ Data Types (VERY IMPORTANT)
+int, float, complex
+string
+list
+tuple
+set
+dictionary
+boolean
+📌 Key things to remember:
+List → mutable
+Tuple → immutable
+Set → unordered, unique values
+Dict → key-value pairs
+
+: Why are tuples faster than lists?
+A: Because tuples are immutable and have less memory overhead.
+
+
+FUNCTION:
+A **function** is a **reusable block of code** that performs a **specific task** and runs **only when it is called**.
+
+Parameter
+A **parameter** is a **variable defined in a function definition** that receives a value when the function is called.
+
+def add(a, b):   # a and b are parameters
+    return a + b
+
+result = add(5, 3)   # 5 and 3 are arguments
+print(result)
+
+*Default arguments
+**Default arguments** are function parameters that **take a predefined value if no argument is passed during the function call**.
+def greet(name, message="Good Morning"):  # message is default argument
+    print(message, name)
+
+greet("Vaishnavi")              # uses default value
+greet("Vaishnavi", "Hello")     # overrides default value
