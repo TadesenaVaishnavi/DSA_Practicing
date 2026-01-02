@@ -1,3 +1,4 @@
+# https://chatgpt.com/share/69576150-ac30-8007-a439-86c80d5cc29c --- chatgpt link
 # binarysearch
 
 def binarysearch(list1, key):
