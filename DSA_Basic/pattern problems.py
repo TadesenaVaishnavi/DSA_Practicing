@@ -54,7 +54,10 @@ for i in range(n):             # i controls the vertical (rows) & # i moves to n
 
 # change only this 1 word up code for this 
 for j in range(i + 1): # -- i - 1
+# why i + 1
+# i = 0 at starting so
 
+    
 # how i + 1 work 
 # range(n) → goes from 0 to 4 (i = 0, 1, 2, 3, 4)
 # For each row i, the inner loop runs i + 1 times:
@@ -70,6 +73,11 @@ for j in range(i + 1): # -- i - 1
 # * * * 
 # * * 
 # * 
+
+# why i,n 
+# i = 0,1,2,3.. at each step it increase 
+# i,n -- 0 to 4
+#        1 to 4 ...
 
 # change only this 1 word
 for j in range(i,n):
@@ -111,8 +119,8 @@ for i in range(n):
   #         * 
 
 # change this 2 word --- j -- i,n and i+1
-for j in range(i+1):
-for j in range(i,n):
+for j in range(i):
+for j in range(n-i):
 # 6)) Upper pyramid (increasing stars):
 
   #         * 
@@ -396,6 +404,7 @@ for i in range(1, n + 1):
     for j in range(i):
         print((i + j) % 2, end=' ')
     print()
+
 
 
 
