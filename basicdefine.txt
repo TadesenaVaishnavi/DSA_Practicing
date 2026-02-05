@@ -1,0 +1,32 @@
+def __init__(self, val=0, next=None): --> This defines what data each node will have when it is created.
+
+This is a constructor __ it runs when a node is created.
+__init__ tells Python what properties each object (node) should have.
+self	Refers to the current object
+val=0	Default value of node
+next=None	By default, node points to nothing
+Next This node stores the address of the next node.
+        node1 = ListNode(1)
+        node2 = ListNode(2)
+        node1.next = node2
+
+
+
+self in detail 
+#------
+self means this object.
+It helps store data inside that node.
+Without self, Python wouldn’t know which node’s data to change.
+
+class ListNode:
+
+linked list node needs to store:
+Value (data)
+Address of next node
+So we create a blueprint (class) to represent one node.
+👉 Think of it like a box that stores data + pointer.
+
+class define:
+
+A class is a blueprint used to create objects that group data + behavior together.
+Instead of separate variables, we bundle everything into one object.
