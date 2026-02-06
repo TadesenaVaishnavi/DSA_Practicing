@@ -45,6 +45,10 @@ A **stack** is a **linear data structure** that follows the **LIFO principle** �
 * **Pop** – remove the top element
 * **Peek/Top** – view the top element
 
+(**) Auxiliary Stack
+an extra (supporting) stack used along with the main stack to help solve a problem efficiently. --- stack inside another stack
+
+
 ## **Linear means elements are arranged one after the other in a single sequence (not branching).
 Examples of linear data structures:
 
@@ -52,3 +56,11 @@ Array
 Stack
 Queue
 Linked List
+
+
+(**)Monotonic Decreasing Stack
+A monotonic decreasing stack is a stack where elements are stored in decreasing order from bottom to top.
+
+Why used?
+To find Next Greater Element
+To solve problems efficiently in O(n) time
