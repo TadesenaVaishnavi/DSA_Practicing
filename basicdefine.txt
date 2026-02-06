@@ -30,3 +30,25 @@ class define:
 
 A class is a blueprint used to create objects that group data + behavior together.
 Instead of separate variables, we bundle everything into one object.
+
+
+
+STACK
+------
+A **stack** is a **linear data structure** that follows the **LIFO principle** — **Last In, First Out**.
+
+👉 The last element added is the first one removed.
+👉 Example: **stack of plates** — you remove the top plate first.
+
+**Basic operations:**
+* **Push** – add an element
+* **Pop** – remove the top element
+* **Peek/Top** – view the top element
+
+## **Linear means elements are arranged one after the other in a single sequence (not branching).
+Examples of linear data structures:
+
+Array
+Stack
+Queue
+Linked List
