@@ -3,7 +3,11 @@
 def input_array_format():
     arr = list(map(int, input().strip("[]").split(',')))
     return arr
-
+    
+# 🚀 Cleaner Version (Handles Spaces Also)
+def input_array_format():
+    arr = list(map(int, input().strip("[]").replace(" ", "").split(',')))
+    return arr
 # Case 2: input: 1 2 3 4 5
 #         output: [1, 2, 3, 4, 5]
 def input_space_separated():
