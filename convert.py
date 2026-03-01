@@ -899,3 +899,204 @@ if __name__ == "__main__":
 
 Convert digits/numbers to words
 
+class Solution:
+    def convert_num_into_word(self, s):
+        # Words for single digits
+        single_digit = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"]
+
+        # Words for numbers from 10 to 19
+        two_digits = ["ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen"]
+
+        # Words for multiples of ten from 20 onwards
+        tens_multiple = ["", "", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety"]
+
+        # Words for higher powers
+        tens_power = ["hundred", "thousand"]
+
+        # Handle empty input
+        if len(s) == 0:
+            print("")
+            return
+
+        # Handle single digit input
+        elif len(s) == 1:
+            print(single_digit[int(s[0])])
+            return
+
+        # Store length of string
+        length = len(s)
+
+        # Loop through each digit
+        for i in range(len(s)):
+            # If more than two digits remain
+            if length > 2:
+                # Print digit and its place value if digit is not zero
+                if int(s[i]) != 0:
+                    print(single_digit[int(s[i])], end=" ")
+                    print(tens_power[length - 3], end=" ")
+                length -= 1
+            else:
+                # Handle numbers between 10 and 19
+                if int(s[i]) == 1:
+                    print(two_digits[int(s[i + 1])], end=" ")
+                    return
+                # Handle multiples of 10 and following digit
+                # This handles numbers from 20 to 99 (except 10–19).
+                elif int(s[i]) != 0:
+                    print(tens_multiple[int(s[i])], end=" ")
+                    if int(s[i + 1]) != 0:
+                        print(single_digit[int(s[i + 1])], end=" ")
+                    return
+
+if __name__ == "__main__":
+    # Create solution object
+    sol = Solution()
+
+    # Example input
+    num = "9090"
+
+    # Call method
+    sol.convert_num_into_word(num)
+
+| Index | Word     |
+| ----- | -------- |
+| 0     | hundred  |
+| 1     | thousand |
+length - 3
+3 - 3 = 0
+tens_power[0] → "hundred"
+4 - 3 = 1
+tens_power[1] → "thousand"
+If number has 4 digits → first digit is thousand place.
+If number has 3 digits → first digit is hundred place.
+
+    
+line works from 10 to 19
+if int(s[i]) == 1:
+ print(two_digits[int(s[i + 1])], end=" ")
+ return
+    
+int('5') == 1 ?
+❌ NO.
+So it does NOT enter that block.
+
+
+1. Make word lists
+STEP 1 — Create word lists
+(single_digit, two_digits, tens_multiple, tens_power)
+2. Handle empty and single
+STEP 2 — Handle edge cases
+If empty → return
+If single digit → print and return
+STEP 3 — Store length
+3. Loop through digits
+4. If more than 2 → place value
+STEP 5 — If length > 2
+→ Print digit + place value
+→ Reduce length
+5. If 2 left → handle 10–19
+6. Else → handle tens and ones
+STEP 6 — If length ≤ 2
+→ If tens digit = 1 → special case
+→ Else → print tens + ones
+That’s it.
+You don’t need to remember 40 lines.
+You only need to remember:
+Lists → Edge case → Loop → Place values → Tens logic
+
+
+You’re asking **“how to remember this?”** — not logic, but memory trick 👍
+Good question.
+
+Don’t try to remember full code.
+
+Remember this **pattern only** 👇
+
+---
+
+# 🔥 1️⃣ Break number into 4 parts
+
+Always think:
+
+1. Single digits (0–9)
+2. Special numbers (10–19)
+3. Multiples of 10 (20, 30, 40…)
+4. Place values (hundred, thousand)
+
+That’s it.
+
+If you remember this structure, you can rebuild code anytime.
+
+---
+
+# 🔥 2️⃣ Core Logic Rule (Very Important)
+
+When converting number to words:
+
+### Rule 1:
+
+If digit is not 0 → print digit word.
+
+### Rule 2:
+
+If position is hundred/thousand → print place word.
+
+### Rule 3:
+
+If tens digit = 1 → use special list (10–19).
+
+### Rule 4:
+
+Else → use tens_multiple list.
+
+That’s the full algorithm.
+
+---
+
+# 🔥 3️⃣ Don’t Memorize Code — Memorize Flow
+
+Flow is:
+
+```
+Check empty
+Check single digit
+Loop through digits
+   If more than 2 digits → handle place values
+   Else → handle tens & ones
+```
+
+That’s it.
+
+---
+
+# 🔥 4️⃣ Real Trick to Remember
+
+Instead of remembering:
+
+```python
+tens_power[length - 3]
+```
+
+Just remember:
+
+👉 “Place value depends on position from right.”
+
+Code can be recreated.
+
+---
+
+# 🎯 Final Advice
+
+In TCS or interview:
+
+They don’t expect memorized code.
+
+They expect:
+
+* Clear logic
+* Clean structure
+* Edge case handling
+
+If you understand pattern, you can write it again in 5–7 minutes.
+
+
