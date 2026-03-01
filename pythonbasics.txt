@@ -45,3 +45,38 @@ def greet(name, message="Good Morning"):  # message is default argument
 
 greet("Vaishnavi")              # uses default value
 greet("Vaishnavi", "Hello")     # overrides default value
+
+range(start, stop, step)
+
+range(len(s) - 1, -1, -1)
+len(s) does NOT include 0,1,2,3
+👉 It just gives total count (4) and len starts from 1,2,3,4
+start ---> len(s) -1 👉 So len(s) - 1 means:
+          Start from the last index (3)    
+          This has NOTHING to do with reverse.
+          It is just because indexing starts from 0.
+stop ---> -1 It is used so that 0 gets included.
+step --> The third value -1 means:
+        👉 Move backward
+        👉 Decrease by 1 each time
+
+👉 -1 means last element
+👉 -2 means second last
+
+convertion
+-----------
+A base tells how many digits a number system uses.
+| Number System | Base | Digits Used |
+| ------------- | ---- | ----------- |
+| Decimal       | 10   | 0–9         |
+| Binary        | 2    | 0–1         |
+| Octal         | 8    | 0–7         |
+| Hexadecimal   | 16   | 0–9, A–F    |
+
+
+Binary  
+-------
+Computers use binary because internally they work with:
+
+0 = OFF
+1 = ON
