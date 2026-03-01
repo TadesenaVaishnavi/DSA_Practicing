@@ -1,3 +1,6 @@
+return
+When return executes, the function immediately stops.
+
 break, continue, pass → interview favorites
 break
 break terminates the loop completely when a condition is met.
